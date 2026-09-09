@@ -54,7 +54,7 @@ index = LlamaCloudIndex(
 query_engine = index.as_query_engine()
 
 # 5. Run the query
-query = "What is this document about?"
+query = "What is the capital of egypt?"
 response = query_engine.query(query)
 
 # 6. Print the response

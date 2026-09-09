@@ -26,5 +26,5 @@ nodes = index.as_retriever()
 response = nodes.retrieve(query)
 
 print("Query response:")
-print(response[1])
+print(response[4])
 
