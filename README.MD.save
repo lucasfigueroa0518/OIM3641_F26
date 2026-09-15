@@ -3,9 +3,13 @@
 the Macarty's class repo lives downstream of it (for pulling purposes).*
 
 <Skills Include:>
+
 * SQL
+
 * JSON
+
 * UI and UX design
+
 * Agentic orchestration and feedback loops
 
 <Directory Structure:>
@@ -14,9 +18,11 @@ the Macarty's class repo lives downstream of it (for pulling purposes).*
 * Dev branches 'user-feature-tite'
 
 To clone this repo and run it locally:
+'''bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 pip install -r requirements.txt
+'''
 
 Linkedin: https://www.linkedin.com/in/lucas-figueroa-705382243/
 Portfolio: https://www.heliosgroup.ai/
