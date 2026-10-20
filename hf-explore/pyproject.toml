@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "pandas>=3.0.6",
     "python-docx>=1.2.0",
     "streamlit>=1.65.0",
     "torch>=2.14.1",
@@ -20,3 +21,8 @@ hf-explore = "hf_explore:main"
 [build-system]
 requires = ["uv_build>=0.12.8,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]

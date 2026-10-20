@@ -83,13 +83,13 @@ def build() -> None:
     normal.paragraph_format.space_after = Pt(8)
 
     doc.add_heading("In-class Activity 12: The Hugging Face Ecosystem", 0)
-    doc.add_paragraph("AI Driven App Development  ·  2026 Fall")
+    doc.add_paragraph("AI Driven App Development, 2026 Fall")
     doc.add_paragraph("Name: Lucas Figueroa")
     doc.add_paragraph(
-        "Our app is a simple lead qualifier. A person pastes an inbound note. "
-        "A small Hub model pulls out the person and the company so we can match "
-        "the note to an account. Deciding whether the lead is actually qualified, "
-        "and any open-ended reply, stays with a person or with Gemini."
+        "Our app is a simple lead qualifier. Someone pastes an inbound note, "
+        "a small Hub model pulls out the person and the company, and we match "
+        "the note to an account. Whether the lead is actually qualified, and any "
+        "open-ended reply, still goes to a person or to Gemini."
     )
 
     doc.add_heading("Part 1: Explore the Hub", level=1)
@@ -97,49 +97,47 @@ def build() -> None:
 
     doc.add_paragraph("Models", style="Heading 3")
     doc.add_paragraph(
-        "Models is the catalog of pretrained weights, plus the tokenizer, model card, and license that go with them. "
-        "A developer cares because this is where you check what a model was trained to do, whether it is small enough to run, and whether the license allows the product you are building."
+        "Models is the catalog of pretrained weights, along with the tokenizer, model card, and license. "
+        "You go there to see what a model was trained to do, whether it will fit on a laptop, and whether the license lets you use it."
     )
     doc.add_paragraph("Datasets", style="Heading 3")
     doc.add_paragraph(
         "Datasets is shared training and evaluation data, with a card that says where the data came from and how it is split. "
-        "A developer cares because the data is what the model actually learned, and a dataset license can block a use even when the model license looks open."
+        "That data is what the model actually learned, and the dataset license can block a use even when the model license looks open."
     )
     doc.add_paragraph("Spaces", style="Heading 3")
     doc.add_paragraph(
-        "Spaces are hosted apps, usually Gradio or Streamlit, that run a model in the browser on Hugging Face hardware. "
-        "A developer cares because you can try a model before downloading it, or put a demo up without running your own server."
+        "Spaces are hosted apps, usually Gradio or Streamlit, that run a model in the browser on Hugging Face's own hardware. "
+        "You can try a model there before you download it, or put up a demo without running your own server."
     )
     doc.add_paragraph("Docs", style="Heading 3")
     doc.add_paragraph(
         "Docs is the documentation for the Hub and the libraries, including transformers and pipeline(). "
-        "A developer cares because that is where the task names, the loading code, and the limits of a model are written down."
+        "The task names, the loading code, and what a model will not do are written there."
     )
 
     doc.add_heading("2. BAAI/bge-small-en-v1.5", level=2)
     doc.add_paragraph("License: MIT.")
     doc.add_paragraph(
-        "The model card describes bge-small-en-v1.5 as an English embedding model that turns text into vectors for retrieval, and says version 1.5 has a more reasonable similarity distribution."
+        "The card says bge-small-en-v1.5 is an English embedding model that turns text into vectors for retrieval, and that version 1.5 has a more reasonable similarity distribution."
     )
 
     doc.add_heading("Part 2: Licenses", level=1)
     doc.add_heading("3. A hypothetical GPL 3.0 model (big_finance_predictor)", level=2)
     doc.add_paragraph(
-        "GPL duties start when you distribute the software. The three cases are different because only the last one hands the program to someone else."
+        "GPL duties start when you distribute the software. Only the last case hands the program to someone else."
     )
     doc.add_paragraph(
-        "Internal analysis only. Running the model on our own machines, for our own analysis, is not distribution. "
-        "We could use it that way without publishing our analysis code."
+        "Internal analysis only. We would run it on our own machines for our own analysis, so we would not have to publish our analysis code."
     )
     doc.add_paragraph(
-        "Behind our web app, users only see results. Showing a score or a label over the network is not the same as giving someone the program. "
-        "GPL 3.0 does not treat that as distribution. The Affero GPL was written to close that gap, and this model is GPL, not AGPL. "
-        "We could keep the app source private. We should still not ship a copy of the weights to the customer."
+        "Behind our web app, users only see results. They would get a score or a label, which is not a copy of the program, and GPL 3.0 does not count that as distribution. "
+        "AGPL was written for the network case. This model is GPL, so we could keep the app source private. We still should not give the customer a copy of the weights."
     )
     doc.add_paragraph(
         "Packaged inside software we sell or give to customers. That is distribution. "
-        "GPL 3.0 is copyleft, so the program we hand over has to be under GPL 3.0, and the people who receive it have to be able to get the source. "
-        "We can charge money. Those customers can pass the software on, and we cannot keep that product closed."
+        "GPL 3.0 is copyleft, so the program we hand over has to stay under GPL 3.0, and the people who receive it have to be able to get the source. "
+        "We can charge for it. Those customers can pass the software on, so the product cannot stay closed."
     )
 
     doc.add_heading("4. A real finance-model license", level=2)
@@ -152,8 +150,8 @@ def build() -> None:
 
     doc.add_heading("5. What that license means", level=2)
     doc.add_paragraph(
-        "Yes. Apache 2.0 is one of the common permissive licenses: we can use, change, and ship the model inside our own app without open-sourcing that app. "
-        "What it restricts is mostly notice-keeping: we have to retain the copyright and license notices, and it comes with no warranty."
+        "Yes, Apache 2.0 is one of the common permissive licenses, so we can use, change, and ship the model inside our own app without releasing that app's source. "
+        "We do have to keep the copyright and license notices, and there is no warranty."
     )
 
     doc.add_heading("Part 3: Try a Model", level=1)
@@ -172,36 +170,32 @@ def build() -> None:
         "Popularity: about 1.38 million downloads in the last month, and 739 likes. The card lists 100 Spaces using it."
     )
     doc.add_paragraph(
-        "Feature: when an inbound note arrives, pull out the person and the company so we can match the lead to an account before anyone decides if it is qualified."
+        "Feature: an inbound note comes in, and the model pulls out the person and the company so we can match the lead to an account before anyone decides if it is qualified."
     )
 
     doc.add_heading("7. Model card vs. a Space", level=2)
     doc.add_paragraph(
-        "On the model card, the panel on the right is Hugging Face’s own widget. "
-        "It offers one text box and a Generate button, and no choices for which entity types to return. "
-        "I was logged out. After I entered “Maya Chen from Northwind Logistics asked for a demo of our lead scoring tool.” and clicked Generate, the panel said: “Please login with your Hugging Face account to run the widgets.” "
-        "The card did not return any entities."
+        "The panel on the right of the model card is Hugging Face's own widget. "
+        "It has one text box and a Generate button, and no way to pick which entity types come back. "
+        "I was logged out. I typed \"Maya Chen from Northwind Logistics asked for a demo of our lead scoring tool.\" and hit Generate. "
+        "The panel said \"Please login with your Hugging Face account to run the widgets.\" No entities came back."
     )
     doc.add_paragraph(
-        "The Space I tried is ashish-soni08/Named-Entity-Recognition, a Gradio app that user built, not the model author and not Hugging Face. "
-        "It has a text box, Clear, Submit, and two example sentences (“My name is Andrew…” and “My name is Poli…”). "
-        "The page was already awake. The same Northwind note came back in a couple of seconds, with Maya Chen highlighted as B-PER and Northwind Logistics highlighted as B-ORG, inside the original sentence. "
-        "It worked. It does not show a confidence score, and it leaves the labels as raw beginning-of-entity tags."
-    )
-    doc.add_paragraph(
-        "So the card widget is Hugging Face’s, and it did not run without a login. "
-        "The Space is a third-party Gradio app: more inputs (examples, clear, submit), a highlighted sentence instead of a score, and it worked in a couple of seconds."
+        "The Space I tried is ashish-soni08/Named-Entity-Recognition. ashish-soni08 built it in Gradio. It is not from the model author or from Hugging Face. "
+        "It has a text box, Clear, Submit, and two example sentences (\"My name is Andrew...\" and \"My name is Poli...\"). "
+        "The page was already awake. I put in the same Northwind note and got a result in a couple of seconds: Maya Chen highlighted as B-PER and Northwind Logistics highlighted as B-ORG, in the original sentence. "
+        "It worked. There is no confidence score, and the labels stay as raw beginning-of-entity tags."
     )
 
     doc.add_heading("8. Why Spaces break or crawl", level=2)
     doc.add_paragraph(
-        "A free Space goes to sleep when nobody is using it. The next visitor waits while the container starts and the model loads, which feels like the page is hung."
+        "Free Spaces go to sleep when nobody is using them. The next person waits while the container starts and the model loads, and it feels like the page is hung."
     )
     doc.add_paragraph(
-        "The free machine is a small shared CPU. A model that is quick on a laptop can crawl there, or sit in a queue behind other people using the same Space."
+        "The free machine is a small shared CPU. Something that is quick on a laptop can crawl there, or wait in a queue behind other people on the same Space."
     )
     doc.add_paragraph(
-        "The Space is a separate app from the model. If the owner hits the free-tier quota, a dependency breaks, or the model file moves, the Space pauses or errors on startup even though the model card is still fine."
+        "A Space is its own app, separate from the model. If the owner hits the free-tier quota, a dependency breaks, or the model file moves, the Space pauses or errors on startup. The model card can still look fine."
     )
 
     doc.add_heading("Part 4: Run It Locally", level=1)
@@ -211,9 +205,9 @@ def build() -> None:
         "uv init hf-explore\ncd hf-explore\nuv add transformers torch",
     )
     doc.add_paragraph(
-        "The project is hf-explore inside the OIM3641_F26 repo. "
+        "The project is the hf-explore folder in the OIM3641_F26 repo. "
         "Python is pinned to 3.12 in .python-version. transformers and torch are installed. "
-        "streamlit was added in Part 5 with uv add streamlit."
+        "I added streamlit in Part 5 with uv add streamlit."
     )
 
     doc.add_heading("10. pipeline() on three lead notes", level=2)
@@ -223,37 +217,37 @@ def build() -> None:
     doc.add_paragraph("First run (download plus load):")
     add_code(doc, RUN1)
     doc.add_paragraph(
-        "Transformers also printed a load report. bert.pooler.dense.weight and bert.pooler.dense.bias were UNEXPECTED. "
-        "That checkpoint carries pooler weights this token-classification head does not use. The report says they can be ignored."
+        "Transformers also printed a load report. bert.pooler.dense.weight and bert.pooler.dense.bias came back UNEXPECTED. "
+        "The checkpoint still has those pooler weights, and this token-classification head does not use them. The report says they can be ignored."
     )
     doc.add_paragraph("Second run (weights already cached):")
     add_code(doc, RUN2)
 
     doc.add_heading("11. Reflection", level=2)
     doc.add_paragraph(
-        "The first run took 31.3 seconds because it downloaded and loaded the weights; the second took 2.1 seconds because those files were already cached. "
-        "Locally the model returned the same person and company the Space highlighted, plus a confidence score and the full name as one span instead of a B-PER tag. "
-        "The model card widget never returned a result, because it asked me to log in."
+        "The first run took 31.3 seconds because it downloaded and loaded the weights, and the second took 2.1 seconds because those files were already cached. "
+        "Locally I got the same person and company the Space highlighted, plus a confidence score, and the full name came back as one span instead of a B-PER tag. "
+        "The model card widget never returned a result because it asked me to log in."
     )
 
     doc.add_heading("Part 5: Put It in an App", level=1)
     doc.add_heading("12. Streamlit app", level=2)
-    doc.add_paragraph("Added with uv add streamlit. Run with uv run streamlit run app.py.")
+    doc.add_paragraph("I added it with uv add streamlit. Run it with uv run streamlit run app.py.")
     doc.add_paragraph(
-        "load_ner() is decorated with @st.cache_resource, so the pipeline loads once. "
+        "load_ner() has @st.cache_resource on it, so the pipeline loads once. "
         "The note comes in through st.text_input. "
-        "The screen shows Person and Company with a confidence percent, not the raw list of dictionaries."
+        "The page lists Person and Company with a confidence percent. It does not print the raw list of dictionaries."
     )
 
     doc.add_heading("13. Make it robust", level=2)
     doc.add_paragraph(
-        "An empty note never calls the model. Extract on a blank box shows st.error: “Paste a note first. An empty message has nothing to extract.” "
-        "The model call is also wrapped in try/except, and a failure is shown with st.error."
+        "If the note is empty, the app does not call the model. Extract on a blank box shows st.error with \"Paste a note first. An empty message has nothing to extract.\" "
+        "The model call is also in try/except, and a failure shows up with st.error."
     )
 
     doc.add_heading("14. Screenshot and app.py", level=2)
     doc.add_paragraph(
-        "Input: “Sarah Okonkwo at Brightline Capital asked for pricing on a 50-seat plan.”"
+        'Input: "Sarah Okonkwo at Brightline Capital asked for pricing on a 50-seat plan."'
     )
     doc.add_picture(str(CROPPED), width=Inches(6.3))
     last = doc.paragraphs[-1]
@@ -263,7 +257,7 @@ def build() -> None:
 
     doc.add_heading("15. Submit", level=2)
     doc.add_paragraph(
-        "Upload this Word document to Canvas. It has the answers, main.py and its output, app.py, and the screenshot."
+        "Upload this Word document to Canvas. It includes the answers, the main.py code and output, app.py, and the screenshot."
     )
 
     doc.save(OUT)
