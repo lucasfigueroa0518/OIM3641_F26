@@ -1,0 +1,13 @@
+Tool: classify_iris
+Description: Does a calculation.
+Inputs: {'sepal_length': {'title': 'Sepal Length', 'type': 'number'}, 'sepal_width': {'title': 'Sepal Width', 'type': 'number'}, 'petal_length': {'title': 'Petal Length', 'type': 'number'}, 'petal_width': {'title': 'Petal Width', 'type': 'number'}}
+
+Tool: iris_probabilities
+Description: Get how confident the model is for each iris species, as a probability from 0 to 1
+for setosa, versicolor and virginica, from the four measurements in centimeters.
+Use this instead of classify_iris when the user wants to know how sure the model is,
+or whether the flower is a borderline case, rather than just the single best guess.
+
+Inputs: {'sepal_length': {'title': 'Sepal Length', 'type': 'number'}, 'sepal_width': {'title': 'Sepal Width', 'type': 'number'}, 'petal_length': {'title': 'Petal Length', 'type': 'number'}, 'petal_width': {'title': 'Petal Width', 'type': 'number'}}
+
+Predicted species: virginica

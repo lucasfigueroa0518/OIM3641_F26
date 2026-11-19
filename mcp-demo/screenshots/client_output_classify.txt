@@ -1,0 +1,7 @@
+Tool: classify_iris
+Description: Classify an iris flower from its four measurements, in centimeters.
+Returns the predicted species: setosa, versicolor, or virginica.
+
+Inputs: {'sepal_length': {'title': 'Sepal Length', 'type': 'number'}, 'sepal_width': {'title': 'Sepal Width', 'type': 'number'}, 'petal_length': {'title': 'Petal Length', 'type': 'number'}, 'petal_width': {'title': 'Petal Width', 'type': 'number'}}
+
+Predicted species: virginica
